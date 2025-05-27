@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>chibayosaKOI - Introduction</title>
+  <link rel="stylesheet" href="../../CSS/style.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <section class="hero sub-hero" style="background-image: url('../../images/about-hero.jpg');">
+    <div class="hero-content">
+      <h1>About ChibaYOSAKOI</h1>
+      <p>The city is the stage, and passion resonates</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="about-intro-section scroll-fade">
+      <div class="container">
+        <h2 class="section-title">Introduction</h2>
+        <p class="lead">
+          ChibaYOSAKOI was first held in <strong>2004</strong> to enliven the city of Chiba through "Yosakoi," a festival where people of all ages can enjoy and the entire city becomes the stage.
+        </p>
+        <div class="intro-flex">
+          <div class="intro-text">
+            <p>
+              Even after cancellations and venue changes due to economic downturns and bad weather,<br>
+              the festival has continued to this day, supported by the passion for Yosakoi.
+            </p>
+            <p>
+              As a festival that <strong>“seriously determines the top”</strong>, we place great importance on fair judging.<br>
+              The only rule is "hold naruko in your hands." Choreography, costumes, and music are all free.<br>
+              Performances that make full use of this freedom captivate the audience and deliver <strong>emotion</strong>.
+            </p>
+            <p>
+              Supported by few rules and many manners, chibayosaKOI aims to deliver "fun" and "emotion" to many people through festival management.
+            </p>
+          </div>
+          <div class="intro-image">
+            <img src="../../images/yosakoi_intro.jpg" alt="Scene from chibayosaKOI">
+          </div>
+        </div>
+
+        <div class="cta-buttons">
+          <a href="/en/about.html#awards" class="btn">See Past Awarded Teams</a>
+          <a href="/en/about.html#outline" class="btn">Festival Overview</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch("../header.html").then(res => res.text()).then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+    fetch("../footer.html").then(res => res.text()).then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+
+    (function() {
+      var path = location.pathname;
+      var isJP = path.indexOf('/jp/') !== -1;
+      var isEN = path.indexOf('/en/') !== -1;
+      var jpPath = path.replace(/\/en\//, '/jp/');
+      var enPath = path.replace(/\/jp\//, '/en/');
+      var html = '';
+      if (isJP) {
+        html = '<a href="' + enPath + '">EN</a> / <a href="' + jpPath + '" class="active">JP</a>';
+      } else if (isEN) {
+        html = '<a href="' + enPath + '" class="active">EN</a> / <a href="' + jpPath + '">JP</a>';
+      } else {
+        html = '<a href="/en/index.html">EN</a> / <a href="/jp/index.html" class="active">JP</a>';
+      }
+      var langSwitch = document.querySelector('.language-switch');
+      if(langSwitch) langSwitch.innerHTML = html;
+    })();
+  </script>
+</body>
+</html>

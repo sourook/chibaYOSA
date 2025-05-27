@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ちばよさこい - はじめに</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/hajimeni.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <section class="hero sub-hero" style="background-image: url('../../images/about-hero.jpg');">
+    <div class="hero-content">
+      <h1>よさこい・ちばよさこい とは</h1>
+      <p>日本の伝統と千葉の情熱が響き合う</p>
+    </div>
+  </section>
+
+  <section class="about-intro-section">
+    <div class="container">
+
+      <!-- よさこいとは -->
+      <h2 class="section-title">よさこいとは</h2>
+      <div class="intro-flex">
+        <div class="intro-text">
+          <p>よさこいは、1954年に高知県で誕生した自由で情熱的な踊りの祭りです。</p>
+          <p>「鳴子」を手に踊ることを唯一のルールとし、音楽・衣装・振付はすべて自由。<br>
+          その個性と創造性が、全国そして世界へと広がっています。</p>
+
+          <p><strong>📌 よさこいの基本ルール</strong></p>
+          <ul>
+            <li>鳴子を手に持って踊ること（必須）</li>
+            <li>衣装・音楽・振付は自由</li>
+            <li>チーム制で構成されることが多い</li>
+            <li>元気・笑顔・迫力ある演舞が評価対象</li>
+          </ul>
+
+          <p><strong>🌍 よさこいの魅力と広がり</strong></p>
+          <p>世代や国境を越えて広がるよさこいは、北海道のYOSAKOIソーランをはじめ、<br>
+          東京・名古屋・海外でも広く開催されています。自由な表現と、熱気あふれる踊りが、多くの人の心を動かしています。</p>
+        </div>
+        <div class="intro-image">
+          <img src="../../images/yosakoi_generic.jpg" alt="よさこいとは">
+        </div>
+      </div>
+
+      <!-- ちばよさこいとは -->
+      <h2 class="section-title">ちばよさこいとは</h2>
+      <div class="intro-flex reverse">
+        <div class="intro-image">
+          <img src="../../images/yosakoi_intro.jpg" alt="ちばよさこいの様子">
+        </div>
+        <div class="intro-text">
+          <p>「ちばよさこい」は <strong>2004年</strong>に誕生。<br>
+          千葉の街全体をステージに、笑顔と感動を届けるために始まりました。</p>
+
+          <p>景気の低迷、悪天候などの困難を乗り越え、<br>
+          よさこいを愛する人々の情熱に支えられ、今日まで続いています。</p>
+
+          <p><strong>本気で頂点を決める祭り</strong>として、審査にも力を入れつつ、<br>
+          表現の自由と、チームの創造性を最大限に尊重した祭りを展開しています。</p>
+
+          <p>鳴子を鳴らし、街に響かせることで、<strong>「楽しさ」と「感動」</strong>を多くの人に届けることを目指しています。</p>
+        </div>
+      </div>
+
+      <!-- ボタン -->
+      <div class="cta-buttons">
+        <a href="../about.html#awards" class="btn">過去の受賞チームを見る</a>
+        <a href="../about.html#outline" class="btn">祭り概要</a>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch("../header.html").then(res => res.text()).then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+    fetch("../footer.html").then(res => res.text()).then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+
+    // 言語切替ボタン自動生成（絶対パス対応）
+    (function() {
+      var path = location.pathname;
+      var isJP = path.indexOf('/jp/') !== -1;
+      var isEN = path.indexOf('/en/') !== -1;
+      var jpPath = path.replace(/\/en\//, '/jp/');
+      var enPath = path.replace(/\/jp\//, '/en/');
+      var html = '';
+      if (isJP) {
+        html = '<a href="' + enPath + '">EN</a> / <a href="' + jpPath + '" class="active">JP</a>';
+      } else if (isEN) {
+        html = '<a href="' + enPath + '" class="active">EN</a> / <a href="' + jpPath + '">JP</a>';
+      } else {
+        html = '<a href="/en/index.html">EN</a> / <a href="/jp/index.html" class="active">JP</a>';
+      }
+      var langSwitch = document.querySelector('.language-switch');
+      if(langSwitch) langSwitch.innerHTML = html;
+    })();
+  </script>
+
+</body>
+</html>

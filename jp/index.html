@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>chibaYOSAKOI2025</title>
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <!-- ヒーロー -->
+  <section class="hero">
+    <div class="hero-slideshow">
+      <img src="../images/yosakoi1.jpg" class="active" alt="よさこい祭り1">
+      <img src="../images/yosakoi2.jpg" alt="よさこい祭り2">
+      <img src="../images/yosakoi3.jpg" alt="よさこい祭り3">
+    </div>
+    <div class="hero-content">
+      <h1>2025年10月4日・5日 開催！</h1>
+      <p>鳴子の音と熱気が街を彩る<br>千葉最大のよさこい祭りへようこそ</p>
+    </div>
+  </section>
+
+  <!-- お知らせ -->
+  <section class="news-section scroll-fade">
+    <h2>お知らせ</h2>
+    <ul>
+      <li class="news-card">
+        <div class="date">2025年5月1日</div>
+        <div class="text">開催日が決定しました！10月4日（土）・5日（日）です。</div>
+      </li>
+      <li class="news-card">
+        <div class="date">2025年5月8日</div>
+        <div class="text">公式パンフレットの準備を進めています。</div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- よさこいの魅力 -->
+  <section class="yosakoi-feature scroll-fade">
+    <div class="container">
+      <h2 class="section-title">よさこいの魅力</h2>
+      <div class="feature-flex">
+        <div class="feature-text">
+          <p>よさこいは、音楽・踊り・衣装がすべて自由。</p>
+          <p>チームごとに個性があふれ、<strong>“本気の表現”</strong>が観客の心を打ちます。</p>
+          <p>鳴子の音が響き、笑顔と感動が街中に広がります。</p>
+        </div>
+        <div class="feature-image">
+          <img src="../images/yosakoi_feature.jpg" alt="よさこい演舞の様子">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ボタンリンク -->
+  <section class="angled-buttons scroll-fade">
+    <a href="schedule.html" class="angled-button red angled-left">
+      <div class="overlay"></div>
+      <div class="text">
+        <h3>開催スケジュール</h3>
+        <p>SCHEDULE</p>
+      </div>
+    </a>
+    <a href="outline.html" class="angled-button blue angled-middle">
+      <div class="overlay"></div>
+      <div class="text">
+        <h3>会場のご案内</h3>
+        <p>VENUE</p>
+      </div>
+    </a>
+    <a href="teams.html" class="angled-button orange angled-middle">
+      <div class="overlay"></div>
+      <div class="text">
+        <h3>参加チーム一覧</h3>
+        <p>TEAM LIST</p>
+      </div>
+    </a>
+    <a href="viewing.html" class="angled-button green angled-right">
+      <div class="overlay"></div>
+      <div class="text">
+        <h3>観覧について</h3>
+        <p>VIEWING</p>
+      </div>
+    </a>
+  </section>
+
+  <!-- ちばよさとは -->
+  <section class="about-intro scroll-fade">
+    <div class="content">
+      <h2>あなたをきっと魅了する</h2>
+      <h2>感動の競演がここにある</h2>
+      <p>「chibayosaKOI」は、<br>
+      たくさんの人へ「楽しさ」と「感動」を<br>
+      届けられる祭り運営を目指します。</p>
+      <a href="about.html">chibayosaKOIとは？</a>
+    </div>
+  </section>
+
+  <!-- SNSセクション -->
+  <section class="sns-section scroll-fade">
+    <div class="sns-container">
+      <h2 class="section-title">公式SNS</h2>
+      <div class="sns-embeds">
+        <!-- X（旧Twitter）のタイムライン埋め込み -->
+        <div class="sns-embed">
+          <a class="twitter-timeline" data-height="400" href="https://x.com/chiba_yosa">Tweets by chiba_yosa</a>
+        </div>
+        <!-- Instagramの個別投稿埋め込み例（複数可） -->
+        <div class="sns-embed">
+          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/chibayosa_2025/" data-instgrm-version="14"></blockquote>
+        </div>
+      </div>
+      <p>最新情報や写真をSNSで発信中！ぜひフォローしてください。</p>
+    </div>
+  </section>
+
+  <!-- ボランティア募集 -->
+  <section class="volunteer-section split scroll-fade">
+    <div class="volunteer-split-container">
+      <div class="volunteer-box student-box">
+        <div class="overlay-dark"></div>
+        <div class="volunteer-content">
+          <h3>学生実行委員</h3>
+          <p>イベントの企画や運営、広報など、祭りの中心となって活動する学生メンバーを募集中！</p>
+          <a href="volunteer.html#student" class="volunteer-btn">学生として参加する</a>
+        </div>
+      </div>
+      <div class="volunteer-box general-box">
+        <div class="overlay-dark"></div>
+        <div class="volunteer-content">
+          <h3>一般ボランティア</h3>
+          <p>会場案内、受付、設営など、お祭りを支える様々なサポートを一緒にお願いします。</p>
+          <a href="volunteer.html#support" class="volunteer-btn">ボランティアとして参加する</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch("header.html").then(res => res.text()).then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+    fetch("footer.html").then(res => res.text()).then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+  </script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <script async src="//www.instagram.com/embed.js"></script>
+  <script src="../script.js"></script>
+</body>
+</html>

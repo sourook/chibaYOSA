@@ -1,0 +1,105 @@
+
+/* =========================
+   はじめにページ専用スタイル
+========================= */
+
+/* セクション全体 */
+.about-intro-section {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 1rem;
+}
+
+.about-intro-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* セクション見出し */
+.section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  color: #FFD700;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+/* テキストと画像の並び用 */
+.intro-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  max-width: 1000px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 逆並び（画像左・テキスト右） */
+.intro-flex.reverse {
+  flex-direction: row-reverse;
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 320px;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+.intro-text p {
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+.intro-text ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.intro-image {
+  flex: 1;
+  min-width: 320px;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-image img {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* CTAボタンエリア */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cta-buttons .btn {
+  background-color: #c62828;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-buttons .btn:hover {
+  background-color: #a51e1e;
+}
