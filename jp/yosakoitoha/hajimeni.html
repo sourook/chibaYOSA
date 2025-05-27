@@ -4,63 +4,65 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ちばよさこい - はじめに</title>
-  <link rel="stylesheet" href="../../css/style.css">
   <link rel="stylesheet" href="../../css/hajimeni.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/footer.css">
 </head>
 <body>
 
   <div id="header"></div>
 
   <!-- ヒーロー -->
-  <section class="hero sub-hero" style="background-image: url('../../images/about-hero.jpg');">
+  <section class="hero sub-hero"style="background-image: url('../../images/about-hero.jpg');">
     <div class="hero-content">
       <h1>よさこい・ちばよさこい とは</h1>
-      <p>自由と情熱が響き合う、日本の元気な夏</p>
+      <p>日本の伝統と千葉の情熱が響き合う</p>
     </div>
   </section>
 
   <!-- よさこいとは -->
-  <section class="about-intro-section">
+  <section class="about-intro-section scroll-fade">
     <div class="container">
       <h2 class="section-title">よさこいとは</h2>
       <div class="intro-flex">
         <div class="intro-text">
-          <p>よさこいは1954年、高知県で誕生した自由で情熱的な踊りの祭りです。<br>
-          手に鳴子を持って踊るのが唯一のルールで、音楽・衣装・振付は自由。</p>
-          <p>この自由なスタイルが多様なチームの創造を生み、日本全国へと広がりました。</p>
-
+          <p>よさこいは、<strong>1954年</strong>に高知県で誕生した、自由と熱気にあふれる踊りの祭りです。</p>
+          <p>手に「鳴子」を持つことだけが唯一のルール。<br>
+          音楽、衣装、振付すべてが自由であることで、<br>
+          参加者の個性と創造性が生きるパフォーマンスが魅力です。</p>
+          <p>その自由度の高さから、日本全国へと広がり、今では海外でも開催されるほどの熱狂を生んでいます。</p>
           <p><strong>📌 よさこいの基本ルール</strong></p>
           <ul>
-            <li>鳴子を手に持って踊る（必須）</li>
-            <li>音楽・衣装・振付は完全自由</li>
-            <li>パレード形式が多く、進行しながら演舞</li>
-            <li>元気さ・笑顔・迫力が魅力</li>
+            <li>鳴子を手に持って踊ること（必須）</li>
+            <li>衣装・音楽・振付は自由</li>
+            <li>チーム制で構成されることが多い</li>
+            <li>元気さ・笑顔・一体感ある演舞が評価のカギ</li>
           </ul>
-
-          <p><strong>🎉 魅力と展開</strong></p>
-          <p>北海道のYOSAKOIソーラン祭りや東京のスーパーよさこい、名古屋のどまつりなど、<br>
-          現在では国内外で200以上のよさこいイベントが開催されています。</p>
         </div>
         <div class="intro-image">
-          <img src="../../images/yosakoi_generic.jpg" alt="よさこい演舞の様子">
+          <img src="../../images/yosakoi_generic.jpg" alt="よさこいとは">
         </div>
       </div>
     </div>
   </section>
 
   <!-- ちばよさこいとは -->
-  <section class="about-intro-section alt">
+  <section class="about-intro-section scroll-fade">
     <div class="container">
-      <h2 class="section-title">ちばよさこいとは</h2>
+      <h2 class="section-title">ちばYOSAKOIとは</h2>
       <div class="intro-flex reverse">
         <div class="intro-image">
-          <img src="../../images/yosakoi_intro.jpg" alt="ちばよさこいの演舞風景">
+          <img src="../../images/yosakoi_intro.jpg" alt="ちばよさこいの様子">
         </div>
         <div class="intro-text">
-          <p>ちばよさこいは<strong>2004年</strong>、千葉市を舞台に始まった地域密着型のよさこいイベントです。</p>
-          <p>悪天候や社会情勢の変化にも屈せず、よさこいへの想いを胸に、学生・市民・企業が一体となって運営を続けています。</p>
-          <p>公平な審査を設けつつも、表現の自由を尊重し、<br>「本気の演舞」「心を動かす感動の共有」がモットーです。</p>
-          <p>鳴子を通じて街を盛り上げ、参加者にも観客にも<strong>「熱気」と「笑顔」</strong>を届ける祭りです。</p>
+          <p>「ちばYOSAKOI」は、<strong>2004年</strong>に千葉の街全体を舞台としてスタートしました。</p>
+          <p>不況や荒天など幾多の困難を乗り越え、<br>
+          よさこいを愛する人々の思いと情熱に支えられて今も続いています。</p>
+          <p><strong>“本気で頂点を競う祭り”</strong>として、<br>
+          公平な審査を大切にしながらも、<br>
+          表現の自由とチームの個性を存分に活かした祭りを展開しています。</p>
+          <p>鳴子を鳴らして街に響かせ、<br>
+          観客と踊り子が一体になれる<strong>「感動と笑顔」</strong>の祭りを目指しています。</p>
         </div>
       </div>
 
@@ -73,11 +75,12 @@
 
   <div id="footer"></div>
 
+  <!-- スクリプト -->
   <script>
-    fetch("../header.html").then(res => res.text()).then(data => {
+    fetch("/jp/header.html").then(res => res.text()).then(data => {
       document.getElementById("header").innerHTML = data;
     });
-    fetch("../footer.html").then(res => res.text()).then(data => {
+    fetch("/jp/footer.html").then(res => res.text()).then(data => {
       document.getElementById("footer").innerHTML = data;
     });
 
@@ -100,5 +103,6 @@
       if (langSwitch) langSwitch.innerHTML = html;
     })();
   </script>
+
 </body>
 </html>

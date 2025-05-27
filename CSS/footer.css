@@ -1,0 +1,10 @@
+/* =========================
+   フッター
+========================= */
+footer {
+    text-align: center;
+    background: #000;
+    color: #ccc;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+  }
