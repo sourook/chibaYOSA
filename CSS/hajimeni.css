@@ -103,3 +103,20 @@
 .cta-buttons .btn:hover {
   background-color: #a51e1e;
 }
+
+.about-intro-section.alt {
+  background-color: #111;
+}
+
+.section-title {
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #FFD700;
+  margin: 0.5rem auto 2rem;
+}
