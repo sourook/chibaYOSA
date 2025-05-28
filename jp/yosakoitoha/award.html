@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>過去の受賞チーム</title>
-  <link rel="stylesheet" href="../../CSS/award.css">
-  <link rel="stylesheet" href="../../css/header.css">
-  <link rel="stylesheet" href="../../css/footer.css">
+  <link rel="stylesheet" href="/chibaYOSA/CSS/award.css">
+  <link rel="stylesheet" href="/chibaYOSA/CSS/header.css">
+  <link rel="stylesheet" href="/chibaYOSA/CSS/footer.css">
 </head>
 <body>
 
@@ -65,13 +65,13 @@
     });
   </script>
 
-   <!-- スクリプト -->
+  <!-- スクリプト -->
   <script>
-    fetch("/jp/header.html").then(res => res.text()).then(data => {
-      document.getElementById("header").innerHTML = data;
+    fetch("/chibaYOSA/jp/header.html").then(res => res.text()).then(data => {
+      document.getElementById("/chibaYOSA/jp/header.html").innerHTML = data;
     });
-    fetch("/jp/footer.html").then(res => res.text()).then(data => {
-      document.getElementById("footer").innerHTML = data;
+    fetch("/chibaYOSA/jp/footer.html").then(res => res.text()).then(data => {
+      document.getElementById("/chibaYOSA/jp/footer.html").innerHTML = data;
     });
 
     // 言語切替ボタン自動生成（絶対パス対応）
@@ -87,7 +87,7 @@
       } else if (isEN) {
         html = '<a href="' + enPath + '" class="active">EN</a> / <a href="' + jpPath + '">JP</a>';
       } else {
-        html = '<a href="/en/index.html">EN</a> / <a href="/jp/index.html" class="active">JP</a>';
+        html = '<a href="/chibaYOSA/en/index.html">EN</a> / <a href="/chibaYOSA/jp/index.html" class="active">JP</a>';
       }
       var langSwitch = document.querySelector('.language-switch');
       if (langSwitch) langSwitch.innerHTML = html;
@@ -96,5 +96,3 @@
 
 </body>
 </html>
-
-
