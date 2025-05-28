@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>過去の受賞チーム</title>
+  <link rel="stylesheet" href="../../CSS/award.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <h1>過去の受賞チーム</h1>
+
+  <section class="award-section">
+    <div class="accordion">
+
+      <button class="accordion-btn">2023年</button>
+      <div class="accordion-panel"><p>パレード審査を勝ち抜いた上位8チーム＋シード権1チームの計9チームがファイナル進出</p><ul><li><strong>◆ 大賞</strong><br>REDA舞神楽</li><li><strong>◆ 準大賞</strong><br>CHIよREN北天魁<br>夏舞徒</li><li><strong>◆ 優秀賞</strong><br>朝霞鳴子遊和会<br>天嵩〜Amata〜<br>若欅-wakakeyaki-<br>黒潮美遊<br>七福よさこい連祝禧<br>チーム☆利ゑ蔵</li></ul></div>
+
+      <button class="accordion-btn">2020年・2021年・2022年</button>
+      <div class="accordion-panel"><p>新型コロナウイルスの影響により開催中止</p></div>
+
+      <button class="accordion-btn">2019年</button>
+      <div class="accordion-panel"><ul><li><strong>◆ 大賞</strong><br>REDA舞神楽</li><li><strong>◆ 準大賞</strong><br>夏舞徒<br>SA:GA-彩雅-</li><li><strong>◆ 最優秀賞</strong><br>朝霞なるこ遊和会</li><li><strong>◆ 優秀賞</strong><br>朝霞高校 若欅<br>黒潮美遊<br>武州武蔵<br>常陸國大子連</li></ul></div>
+
+      <button class="accordion-btn">2018年</button>
+      <div class="accordion-panel"><p>荒天により開催中止</p></div>
+
+      <button class="accordion-btn">2017年</button>
+      <div class="accordion-panel"><ul><li><strong>◆ 大賞</strong><br>REDA舞神楽</li><li><strong>◆ 準大賞</strong><br>CHIよREN北天魁<br>夏舞徒</li><li><strong>◆ 最優秀賞</strong><br>鴉</li><li><strong>◆ 優秀賞</strong><br>水戸藩YOSAKOI連<br>朝霞なるこ遊和会<br>武州武蔵<br>朝霞鳴子一族め組</li></ul></div>
+
+      <button class="accordion-btn">2016年</button>
+      <div class="accordion-panel"><ul><li><strong>◆ 大賞</strong><br>REDA舞神楽</li><li><strong>◆ 準大賞</strong><br>CHIよREN北天魁<br>破天荒 supported by 安全輸送</li><li><strong>◆ 優秀賞</strong><br>黒潮美遊</li><li><strong>◆ 奨励賞</strong><br>甲斐◇風林火山<br>水戸藩YOSAKOI連<br>ダンスパフォーマンス集団 迫―HAKU―<br>勢や</li></ul></div>
+
+      <button class="accordion-btn">2015年</button>
+      <div class="accordion-panel"><p>前夜の強風を受け縮小開催のため審査なし</p></div>
+
+      <button class="accordion-btn">2014年</button>
+      <div class="accordion-panel"><ul><li><strong>◆ 大賞</strong><br>REDA舞神楽</li><li><strong>◆ 準大賞</strong><br>CHIよREN北天魁<br>燦 -SUN-</li><li><strong>◆ 最優秀賞</strong><br>夏舞徒</li><li><strong>◆ 優秀賞</strong><br>勢や<br>福島学生“源種”～seed～<br>YOSAKOI舞ちはら<br>朝霞なるこ遊和会</li></ul></div>
+
+      <button class="accordion-btn">2013年</button>
+      <div class="accordion-panel"><p>台風により開催中止</p></div>
+
+      <button class="accordion-btn">2012年</button>
+      <div class="accordion-panel"><ul><li><strong>◆ グランプリ</strong><br>REDA舞神楽</li><li><strong>◆ 準グランプリ</strong><br>CHIよREN北天魁<br>銀輪舞隊</li><li><strong>◆ 最優秀賞</strong><br>郷人</li><li><strong>◆ 優秀賞</strong><br>かつみ鳴子会<br>YOSAKOI舞ちはら<br>黒潮美遊<br>音ら韻</li></ul></div>
+
+      <button class="accordion-btn">2011年</button>
+      <div class="accordion-panel"><ul><li><strong>◆ グランプリ</strong><br>REDA舞神楽</li><li><strong>◆ 準グランプリ</strong><br>夏舞徒<br>銀輪舞隊</li><li><strong>◆ 最優秀賞</strong><br>黒潮美遊</li><li><strong>◆ 優秀賞</strong><br>CHIよREN北天魁<br>かつみ鳴子会<br>郷人<br>市立船橋高校THEヨサコイ</li></ul></div>
+
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const panel = btn.nextElementSibling;
+        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+
+   <!-- スクリプト -->
+  <script>
+    fetch("/jp/header.html").then(res => res.text()).then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+    fetch("/jp/footer.html").then(res => res.text()).then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+
+    // 言語切替ボタン自動生成（絶対パス対応）
+    (function() {
+      var path = location.pathname;
+      var isJP = path.indexOf('/jp/') !== -1;
+      var isEN = path.indexOf('/en/') !== -1;
+      var jpPath = path.replace(/\/en\//, '/jp/');
+      var enPath = path.replace(/\/jp\//, '/en/');
+      var html = '';
+      if (isJP) {
+        html = '<a href="' + enPath + '">EN</a> / <a href="' + jpPath + '" class="active">JP</a>';
+      } else if (isEN) {
+        html = '<a href="' + enPath + '" class="active">EN</a> / <a href="' + jpPath + '">JP</a>';
+      } else {
+        html = '<a href="/en/index.html">EN</a> / <a href="/jp/index.html" class="active">JP</a>';
+      }
+      var langSwitch = document.querySelector('.language-switch');
+      if (langSwitch) langSwitch.innerHTML = html;
+    })();
+  </script>
+
+</body>
+</html>
+
+

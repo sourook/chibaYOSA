@@ -1,0 +1,53 @@
+/* 全体のフォントと背景 */
+body {
+  font-family: 'Noto Serif JP', serif;
+  margin: 2rem;
+  background: #fff;
+  color: #000;
+}
+
+/* 各年のボタン */
+.accordion-btn {
+  background: none;
+  color: #800000; /* 深い赤色 */
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ＋マークの追加 */
+.accordion-btn::before {
+  content: "+ ";
+  font-weight: bold;
+}
+
+/* アクティブ時は−に変更 */
+.accordion-btn.active::before {
+  content: "− ";
+}
+
+/* 折りたたみパネル */
+.accordion-panel {
+  display: none;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-left: 3px solid #ccc;
+}
+
+/* リストの体裁 */
+.accordion-panel ul {
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.accordion-panel li {
+  margin-bottom: 0.5rem;
+}
+
+body {
+  margin: 0 !important;
+}
