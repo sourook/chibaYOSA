@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festival Information | Chiba YOSAKOI</title>
+  <link rel="stylesheet" href="../../css/info.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <div class="info-hero-image"></div>
+  <section class="hero sub-hero" style="background-image: url('../../images/info-hero.jpg');">
+    <div class="hero-content">
+      <h1>Festival Information</h1>
+      <p>Key details about Chiba YOSAKOI</p>
+    </div>
+  </section>
+
+  <main class="info-page">
+    <h1>Festival Information</h1>
+
+    <table class="info-table">
+      <tr>
+        <th>Date</th>
+        <td>
+          October 5, 2024 (Sat) – Eve Festival<br>
+          October 6, 2024 (Sun) – Main Festival
+        </td>
+      </tr>
+      <tr>
+        <th>Venue</th>
+        <td>
+          Eve Festival: Chiba Central Park (1-2 Chuo, Chuo-ku, Chiba City)<br>
+          Main Festival: Kazusa Sarashina Park (5-1 Sarashina, Ichihara City)
+        </td>
+      </tr>
+      <tr>
+        <th>Organizer</th>
+        <td>Chiba YOSAKOI Executive Committee (NPO Chiba Yosakoi Liaison Council)</td>
+      </tr>
+      <tr>
+        <th>Co-Organizer</th>
+        <td>Kazusa Ichihara Kokufu Festival Executive Committee, Ichihara City</td>
+      </tr>
+      <tr>
+        <th>Content</th>
+        <td>Yosakoi Naruko Dance Competition</td>
+      </tr>
+    </table>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch("/en/header.html").then(res => res.text()).then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+    fetch("/en/footer.html").then(res => res.text()).then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+  </script>
+
+</body>
+</html>

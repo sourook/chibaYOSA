@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>開催概要 | ちばよさこい</title>
+  <link rel="stylesheet" href="../../css/info.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <div class="info-hero-image"></div>
+    <section class="hero sub-hero" style="background-image: url('../../images/info-hero.jpg');">
+        <div class="hero-content">
+        <h1>開催概要</h1>
+        <p>ちばYOSAKOIの基本情報をお届けします。</p>
+        </div>
+    </section>
+
+
+  <main class="info-page">
+    <h1>開催概要</h1>
+
+    <table class="info-table">
+      <tr>
+        <th>開催日</th>
+        <td>
+          2024年10月5日（土）　前夜祭<br>
+          2024年10月6日（日）　本祭
+        </td>
+      </tr>
+      <tr>
+        <th>会　場</th>
+        <td>
+          前夜祭／千葉市中央公園（千葉市中央区中央1丁目2）<br>
+          本祭／上総更級公園（市原市更級5丁目1）
+        </td>
+      </tr>
+      <tr>
+        <th>主　催</th>
+        <td>ちばYOSAKOI実行委員会（NPO法人千葉よさこい連絡協議会）</td>
+      </tr>
+      <tr>
+        <th>共　催</th>
+        <td>上総いちはら国府祭り実行委員会・市原市</td>
+      </tr>
+      <tr>
+        <th>内　容</th>
+        <td>よさこい鳴子踊りの競演</td>
+      </tr>
+    </table>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch("/jp/header.html").then(res => res.text()).then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+    fetch("/jp/footer.html").then(res => res.text()).then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+  </script>
+
+</body>
+</html>
