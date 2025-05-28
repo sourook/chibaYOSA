@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>準備中｜ちばYOSAKOI</title>
-  <link rel="stylesheet" href="/chibaYOSA/css//css/day.css">
-  <link rel="stylesheet" href="/chibaYOSA/css//css/header.css">
-  <link rel="stylesheet" href="/chibaYOSA/css//css/footer.css">
+  <link rel="stylesheet" href="/css/day.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/footer.css">
 </head>
 <body>
 
@@ -22,11 +22,11 @@
   <div id="footer"></div>
 
   <script>
-    fetch("/chibaYOSA/css//jp/header.html").then(res => res.text()).then(data => {
-      document.getElementById("/chibaYOSA/css//jp/header.html").innerHTML = data;
+    fetch("/jp/header.html").then(res => res.text()).then(data => {
+      document.getElementById("/jp/header.html").innerHTML = data;
     });
-    fetch("/chibaYOSA/css//jp/footer.html").then(res => res.text()).then(data => {
-      document.getElementById("/chibaYOSA/css//jp/footer.html").innerHTML = data;
+    fetch("/jp/footer.html").then(res => res.text()).then(data => {
+      document.getElementById("/jp/footer.html").innerHTML = data;
     });
   </script>
 

@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUGGOI WORLD！｜ちばYOSAKOI</title>
-  <link rel="stylesheet" href="/chibaYOSA/css//css/souodori.css">
-  <link rel="stylesheet" href="/chibaYOSA/css//css/header.css">
-  <link rel="stylesheet" href="/chibaYOSA/css//css/footer.css">
+  <link rel="stylesheet" href="/css/souodori.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/footer.css">
 </head>
 <body>
 
@@ -23,7 +23,7 @@
     <section class="media">
       <h2>音源（MP3）</h2>
       <audio controls>
-        <source src="/chibaYOSA/css//media/suggoi_world.mp3" type="audio/mp3">
+        <source src="/media/suggoi_world.mp3" type="audio/mp3">
         お使いのブラウザは audio タグに対応していません。
       </audio>
 
@@ -89,11 +89,11 @@ SUGGOI WORLD！（曲・歌　宮本毅）
   <div id="footer"></div>
 
   <script>
-    fetch("/chibaYOSA/css//jp/header.html").then(res => res.text()).then(data => {
-      document.getElementById("/chibaYOSA/css//jp/header.html").innerHTML = data;
+    fetch("/jp/header.html").then(res => res.text()).then(data => {
+      document.getElementById("/jp/header.html").innerHTML = data;
     });
-    fetch("/chibaYOSA/css//jp/footer.html").then(res => res.text()).then(data => {
-      document.getElementById("/chibaYOSA/css//jp/footer.html").innerHTML = data;
+    fetch("/jp/footer.html").then(res => res.text()).then(data => {
+      document.getElementById("/jp/footer.html").innerHTML = data;
     });
   </script>
 
