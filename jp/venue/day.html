@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>準備中｜ちばYOSAKOI</title>
+  <link rel="stylesheet" href="../../css/day.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main class="coming-soon-page">
+    <section class="coming-soon">
+      <h2>Coming Soon</h2>
+      <p>このセクションは現在準備中です。公開までしばらくお待ちください。</p>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch("/jp/header.html").then(res => res.text()).then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+    fetch("/jp/footer.html").then(res => res.text()).then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+  </script>
+
+</body>
+</html>

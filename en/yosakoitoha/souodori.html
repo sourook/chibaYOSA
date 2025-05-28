@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUGGOI WORLD! | Chiba YOSAKOI</title>
+  <link rel="stylesheet" href="../../css/souodori.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main class="souodori-page">
+    <section class="intro">
+      <h1>SUGGOI WORLD!</h1>
+      <p>Completed in 2015, “SUGGOI WORLD!” was created as a copyright-free dance to be enjoyed at festivals, YOSAKOI events, and sports days across Japan.</p>
+      <p>The choreography was supervised by Mr. Takeshi Miyamoto, known for the popular dance “Yocchore.” YOSAKOI choreographers from Chiba collaborated on this project, focusing on the theme “easy and fun for anyone to dance.”</p>
+      <p>The audio, choreography video, and lyrics are all released as copyright-free. Feel free to use or share this page without restriction.</p>
+    </section>
+
+    <section class="media">
+      <h2>Audio (MP3)</h2>
+      <audio controls>
+        <source src="../../media/suggoi_world.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+
+      <h2>Choreography Video</h2>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://youtu.be/3jl3Z2EKDxE" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="lyrics">
+      <h2>Lyrics</h2>
+      <pre>
+SUGGOI WORLD! (Music & Lyrics by Takeshi Miyamoto)
+“One, Two, Three – GO!!”
+
+Dance more than you eat all day long! “Wasshoi! It’s a festival!”
+All year round, 365 days! “Wasshoi! It’s a festival!”
+Laugh together, have fun, shout it out! “Banzai! Kanpai! Wahaha!”
+“Wasshoi! Wasshoi! It’s a festival!”
+
+★ Yaren Soran Fight!
+“Sing it! Everybody!” “Dance it! Guts! Guts!”
+“Ei-yassa!” Jumpin’ Jumpin’ World
+“Asso-re!” All day all night, singin’, dancin’ world
+“Hardokkoi!” Tryin’, flyin’, jumpin’, awesome world
+“SUGGOI WORLD!”
+
+(Repeat verses with Japanese call-and-response left as is for performance feel)
+
+Let the bonds of pride unleash your passion,
+Sing your strength hotter than the sun,
+Let your burning soul soar into the sky,
+Breathe life into all beings now!
+
+SUGGOI MATSURI DA! “YEAHHHHH!”
+
+(Full translation can be refined further upon request)
+      </pre>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch("/en/header.html").then(res => res.text()).then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+    fetch("/en/footer.html").then(res => res.text()).then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+  </script>
+
+</body>
+</html>

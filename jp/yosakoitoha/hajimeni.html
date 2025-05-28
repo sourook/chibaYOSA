@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ちばよさこい - はじめに</title>
+  <title>Chiba YOSAKOI - Introduction</title>
   <link rel="stylesheet" href="../../css/hajimeni.css">
   <link rel="stylesheet" href="../../css/header.css">
   <link rel="stylesheet" href="../../css/footer.css">
@@ -12,76 +12,73 @@
 
   <div id="header"></div>
 
-  <!-- ヒーロー -->
-  <section class="hero sub-hero"style="background-image: url('../../images/about-hero.jpg');">
+  <!-- Hero -->
+  <section class="hero sub-hero" style="background-image: url('../../images/about-hero.jpg');">
     <div class="hero-content">
-      <h1>よさこいとは</h1>
-      <p>日本の伝統と千葉の情熱が響き合う</p>
+      <h1>What is Yosakoi?</h1>
+      <p>Where Japanese tradition meets the passion of Chiba</p>
     </div>
   </section>
 
-  <!-- よさこいとは -->
+  <!-- What is Yosakoi -->
   <section class="about-intro-section scroll-fade">
     <div class="container">
-      <h2 class="section-title">よさこいとは</h2>
+      <h2 class="section-title">What is Yosakoi?</h2>
       <div class="intro-flex">
         <div class="intro-text">
-          <p>よさこいは、<strong>1954年</strong>に高知県で誕生した、自由と熱気にあふれる踊りの祭りです。</p>
-          <p>手に「鳴子」を持つことだけが唯一のルール。<br>
-          音楽、衣装、振付すべてが自由であることで、<br>
-          参加者の個性と創造性が生きるパフォーマンスが魅力です。</p>
-          <p>その自由度の高さから、日本全国へと広がり、今では海外でも開催されるほどの熱狂を生んでいます。</p>
-          <p><strong>📌 よさこいの基本ルール</strong></p>
+          <p>Yosakoi is a vibrant and energetic dance festival that originated in Kochi Prefecture in <strong>1954</strong>.</p>
+          <p>The only rule is to dance while holding “naruko” clappers.<br>
+          With complete freedom in music, costumes, and choreography,<br>
+          participants express their creativity and individuality through dynamic performances.</p>
+          <p>Thanks to its flexibility, the Yosakoi movement has spread all over Japan—and even abroad—captivating people around the world.</p>
+          <p><strong>📌 Basic Yosakoi Rules</strong></p>
           <ul>
-            <li>鳴子を手に持って踊ること</li>
-            <li>衣装・音楽・振付は自由</li>
-            <li>チーム制で構成されることが多い</li>
-            <li>元気さ・笑顔・一体感ある演舞が評価のカギ</li>
+            <li>Dancers must hold naruko clappers</li>
+            <li>Freedom in costumes, music, and choreography</li>
+            <li>Usually performed by teams</li>
+            <li>Energetic, smiling, and unified performances are the key to success</li>
           </ul>
         </div>
         <div class="intro-image">
-          <img src="../../images/yosakoi_generic.jpg" alt="よさこいとは">
+          <img src="../../images/yosakoi_generic.jpg" alt="What is Yosakoi">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ちばよさこいとは -->
+  <!-- What is Chiba YOSAKOI -->
   <section class="about-intro-section scroll-fade">
     <div class="container">
-      <h2 class="section-title">ちばYOSAKOIとは</h2>
+      <h2 class="section-title">What is Chiba YOSAKOI?</h2>
       <div class="intro-flex reverse">
         <div class="intro-image">
-          <img src="../../images/yosakoi_intro.jpg" alt="ちばよさこいの様子">
+          <img src="../../images/yosakoi_intro.jpg" alt="Scene from Chiba YOSAKOI">
         </div>
         <div class="intro-text">
-          <p>「ちばYOSAKOI」は、<strong>2004年</strong>に千葉の街全体を舞台としてスタートしました。</p>
-          <p>不況や荒天など幾多の困難を乗り越え、<br>
-          よさこいを愛する人々の思いと情熱に支えられて今も続いています。</p>
-          <p><strong>“本気で頂点を競う祭り”</strong>として、<br>
-          公平な審査を大切にしながらも、<br>
-          表現の自由とチームの個性を存分に活かした祭りを展開しています。</p>
-          <p>鳴子を鳴らして街に響かせ、<br>
-          観客と踊り子が一体になれる<strong>「感動と笑顔」</strong>の祭りを目指しています。</p>
+          <p>“Chiba YOSAKOI” began in <strong>2004</strong>, turning the entire city of Chiba into a stage for celebration.</p>
+          <p>Despite challenges like economic downturns and bad weather,<br>
+          the event continues to thrive thanks to the passion and love of its participants.</p>
+          <p>It is a festival where teams seriously compete for the top prize,<br>
+          balancing fair judging with expressive freedom and individual creativity.</p>
+          <p>With naruko echoing through the city,<br>
+          our aim is to create a festival full of <strong>“emotion and smiles”</strong> that connects dancers and audiences alike.</p>
         </div>
       </div>
-
-      
     </div>
   </section>
 
   <div id="footer"></div>
 
-  <!-- スクリプト -->
+  <!-- Scripts -->
   <script>
-    fetch("/jp/header.html").then(res => res.text()).then(data => {
+    fetch("/en/header.html").then(res => res.text()).then(data => {
       document.getElementById("header").innerHTML = data;
     });
-    fetch("/jp/footer.html").then(res => res.text()).then(data => {
+    fetch("/en/footer.html").then(res => res.text()).then(data => {
       document.getElementById("footer").innerHTML = data;
     });
 
-    // 言語切替ボタン自動生成（絶対パス対応）
+    // Language switch auto generation
     (function() {
       var path = location.pathname;
       var isJP = path.indexOf('/jp/') !== -1;

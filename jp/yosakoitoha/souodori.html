@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SUGGOI WORLD！｜ちばYOSAKOI</title>
+  <link rel="stylesheet" href="../../css/souodori.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <main class="souodori-page">
+    <section class="intro">
+      <h1>SUGGOI WORLD！</h1>
+      <p>著作権フリーとして全国のお祭り・よさこいイベント・運動会等で踊ってもらえる乱舞を目指し、2015年に完成した「SUGGOI WORLD！（スゴイワ）」。</p>
+      <p>この乱舞の制作には、全国で踊られている「よっちょれ」で知られる宮本毅さんが参加。振付は“簡単で誰でもすぐに踊れる”をテーマに千葉の振付師が協力して制作しました。</p>
+      <p>公開されている音源・振付動画・歌詞すべては著作権フリーです。このページへのリンクもご自由にご利用ください。</p>
+    </section>
+
+    <section class="media">
+      <h2>音源（MP3）</h2>
+      <audio controls>
+        <source src="../../media/suggoi_world.mp3" type="audio/mp3">
+        お使いのブラウザは audio タグに対応していません。
+      </audio>
+
+      <h2>振付動画</h2>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://youtu.be/3jl3Z2EKDxE" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="lyrics">
+      <h2>歌詞</h2>
+      <pre>
+SUGGOI WORLD！（曲・歌　宮本毅）
+「ワン・ツー・スリー GO！！」
+
+朝から晩まで三度のメシより踊れや 「ワッショイ！お祭りだ！」
+年がら年中365日も 「ワッショイ！お祭りだ！」
+みんなでワイワイ面白おかしく 「バンザイ！カンパイ！ワッハッハー！」
+「ワッショイ！ワッショイ！お祭りだ！」
+
+★ヤーレンソーラン ファイト！
+「ウタエ！エビバディ！」「オドレ！ガッツ！ガッツ！」
+「エイヤッサ！」ジャンピン ジャンピンワールド
+「アッソーレ！」シンギンダンシングワールド
+「ハードッコイ！」サイコーワールド
+「SUGGOI WORLD！」
+
+「エイヤッサ！」 ヤーレンソーラン ジャンピン ジャンピンワールド
+「アッソーレ！」 オールデイ オールナイト シンギンダンシングワールド
+「ハードッコイ！」 トライン フライン ジャンピン サイコーワールド
+「SUGGOI WORLD！」
+
+世界の端から端までどこでも踊れや 「ワッショイ！お祭りだ！」
+東西南北老若男女も誰でも 「ワッショイ！お祭りだ！」
+みんなでワイワイ面白おかしく 「バンザイ！カンパイ！ワッハッハー！」
+「ワッショイ！ワッショイ！ワッショイ！ワッショイ！ワッショイ！ワッショイ！お祭りだ！」
+
+★
+
+誇らしき絆達よ情熱を解き放て 太陽よりも熱い力を歌え
+燃えたぎる命を大空へ解き放て すべての生命達をいま息吹かせて
+
+★
+
+マジニ サイコー ニッポン スシ テンプラ 「ハイ！」
+サイコー ニッポン サイコー二 スッゴイワ 「ハイ！」
+
+サイコー ニッポン ヤーレンソーランファイト！「ハイ！」
+サイコー ニッポン ヤーレンソーランファイト！「ハイ！」
+
+サイコーニッポンサイコー サイコーニッポンサイコー
+サイコーニッポンサイコー ヤーレンソーラン「ファイト！」 （×3）
+
+サイコーニッポンサイコー サイコーニッポンサイコー
+サイコーニッポンノ
+「SUGGOI MATSURI ダ！ 」
+
+「イエ～イ！」
+      </pre>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    fetch("/jp/header.html").then(res => res.text()).then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+    fetch("/jp/footer.html").then(res => res.text()).then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+  </script>
+
+</body>
+</html>

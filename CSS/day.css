@@ -1,0 +1,85 @@
+/* ================ 共通スタイル ================ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #ffffff;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* 見出し */
+h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #800000;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* セクションコンテナ */
+.award-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* ================ アコーディオン ================ */
+
+/* ボタン（年別） */
+.accordion-btn {
+  width: 100%;
+  text-align: left;
+  background-color: #f8f8f8;
+  color: #800000;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.accordion-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.accordion-btn::before {
+  content: "+ ";
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.accordion-btn.active::before {
+  content: "− ";
+}
+
+/* パネル */
+.accordion-panel {
+  display: none;
+  background-color: #fffdf9;
+  border-left: 4px solid #800000;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* リスト */
+.accordion-panel ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.accordion-panel li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.accordion-panel strong {
+  color: #444;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+}

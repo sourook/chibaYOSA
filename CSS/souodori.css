@@ -1,0 +1,79 @@
+
+/* souodori.css - SUGGOI WORLD 専用ページ */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.souodori-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* セクション共通 */
+.souodori-page section {
+  margin-bottom: 3rem;
+}
+
+.intro h1 {
+  font-size: 2.4rem;
+  color: #FFD700;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.intro p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.media h2,
+.lyrics h2 {
+  font-size: 1.6rem;
+  color: #FFD700;
+  border-left: 5px solid #FFD700;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* オーディオプレーヤー */
+audio {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* YouTube動画のレスポンシブ対応 */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background-color: #111;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* 歌詞 */
+.lyrics pre {
+  white-space: pre-wrap;
+  background-color: #111;
+  padding: 1rem;
+  border-left: 4px solid #FFD700;
+  border-radius: 4px;
+  line-height: 1.7;
+  font-size: 1rem;
+  overflow-x: auto;
+}
