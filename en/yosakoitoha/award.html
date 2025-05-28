@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Past Award-Winning Teams</title>
+  <link rel="stylesheet" href="../../CSS/award.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+</head>
+<body>
+
+  <div id="header"></div>
+
+  <h1>Past Award-Winning Teams</h1>
+
+  <section class="award-section">
+    <div class="accordion">
+
+      <button class="accordion-btn">2023</button>
+      <div class="accordion-panel"><p>The top 8 teams that excelled in the parade judging plus 1 seeded team advanced to the finals, totaling 9 teams.</p><ul><li><strong>◆ Grand Prize</strong><br>REDA Maikagura</li><li><strong>◆ Semi-Grand Prize</strong><br>CHIyoREN Hokkienkai<br>Namaito</li><li><strong>◆ Excellence Award</strong><br>Asaka Naruko Yuwakai<br>Amata<br>Wakakeyaki<br>Kuroshio Biyu<br>Shichifuku Yosakoi Ren Shukuki<br>Team☆Riezo</li></ul></div>
+
+      <button class="accordion-btn">2020–2022</button>
+      <div class="accordion-panel"><p>Canceled due to the COVID-19 pandemic.</p></div>
+
+      <button class="accordion-btn">2019</button>
+      <div class="accordion-panel"><ul><li><strong>◆ Grand Prize</strong><br>REDA Maikagura</li><li><strong>◆ Semi-Grand Prize</strong><br>Namaito<br>SA:GA -Saiga-</li><li><strong>◆ Outstanding Performance Award</strong><br>Asaka Naruko Yuwakai</li><li><strong>◆ Excellence Award</strong><br>Asaka High School Wakakeyaki<br>Kuroshio Biyu<br>Bushu Musashi<br>Hitachinokuni Daigorin</li></ul></div>
+
+      <button class="accordion-btn">2018</button>
+      <div class="accordion-panel"><p>Canceled due to severe weather.</p></div>
+
+      <button class="accordion-btn">2017</button>
+      <div class="accordion-panel"><ul><li><strong>◆ Grand Prize</strong><br>REDA Maikagura</li><li><strong>◆ Semi-Grand Prize</strong><br>CHIyoREN Hokkienkai<br>Namaito</li><li><strong>◆ Outstanding Performance Award</strong><br>Karasu</li><li><strong>◆ Excellence Award</strong><br>Mito Clan Yosakoi Ren<br>Asaka Naruko Yuwakai<br>Bushu Musashi<br>Asaka Naruko Ichizoku Megumi</li></ul></div>
+
+      <button class="accordion-btn">2016</button>
+      <div class="accordion-panel"><ul><li><strong>◆ Grand Prize</strong><br>REDA Maikagura</li><li><strong>◆ Semi-Grand Prize</strong><br>CHIyoREN Hokkienkai<br>Hatenkou supported by Anzen Yusou</li><li><strong>◆ Excellence Award</strong><br>Kuroshio Biyu</li><li><strong>◆ Encouragement Award</strong><br>Kai ◇ Fuurinkazan<br>Mito Clan Yosakoi Ren<br>Dance Performance Group HAKU<br>Ikkiya</li></ul></div>
+
+      <button class="accordion-btn">2015</button>
+      <div class="accordion-panel"><p>No judging due to downsized event from strong wind the night before.</p></div>
+
+      <button class="accordion-btn">2014</button>
+      <div class="accordion-panel"><ul><li><strong>◆ Grand Prize</strong><br>REDA Maikagura</li><li><strong>◆ Semi-Grand Prize</strong><br>CHIyoREN Hokkienkai<br>SUN -San-</li><li><strong>◆ Outstanding Performance Award</strong><br>Namaito</li><li><strong>◆ Excellence Award</strong><br>Ikkiya<br>Fukushima Students “Seed”<br>Yosakoi Mai Chihara<br>Asaka Naruko Yuwakai</li></ul></div>
+
+      <button class="accordion-btn">2013</button>
+      <div class="accordion-panel"><p>Canceled due to typhoon.</p></div>
+
+      <button class="accordion-btn">2012</button>
+      <div class="accordion-panel"><ul><li><strong>◆ Grand Prix</strong><br>REDA Maikagura</li><li><strong>◆ Runner-up Grand Prix</strong><br>CHIyoREN Hokkienkai<br>Ginrin Butai</li><li><strong>◆ Outstanding Performance Award</strong><br>Kyōjin</li><li><strong>◆ Excellence Award</strong><br>Katsumi Naruko Kai<br>Yosakoi Mai Chihara<br>Kuroshio Biyu<br>Otorain</li></ul></div>
+
+      <button class="accordion-btn">2011</button>
+      <div class="accordion-panel"><ul><li><strong>◆ Grand Prix</strong><br>REDA Maikagura</li><li><strong>◆ Runner-up Grand Prix</strong><br>Namaito<br>Ginrin Butai</li><li><strong>◆ Outstanding Performance Award</strong><br>Kuroshio Biyu</li><li><strong>◆ Excellence Award</strong><br>CHIyoREN Hokkienkai<br>Katsumi Naruko Kai<br>Kyōjin<br>Ichiritsu Funabashi HS THE Yosakoi</li></ul></div>
+
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    document.querySelectorAll('.accordion-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const panel = btn.nextElementSibling;
+        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+
+  <script>
+    fetch("/en/header.html").then(res => res.text()).then(data => {
+      document.getElementById("header").innerHTML = data;
+    });
+    fetch("/en/footer.html").then(res => res.text()).then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+
+    (function() {
+      var path = location.pathname;
+      var isJP = path.indexOf('/jp/') !== -1;
+      var isEN = path.indexOf('/en/') !== -1;
+      var jpPath = path.replace(/\/en\//, '/jp/');
+      var enPath = path.replace(/\/jp\//, '/en/');
+      var html = '';
+      if (isJP) {
+        html = '<a href="' + enPath + '">EN</a> / <a href="' + jpPath + '" class="active">JP</a>';
+      } else if (isEN) {
+        html = '<a href="' + enPath + '" class="active">EN</a> / <a href="' + jpPath + '">JP</a>';
+      } else {
+        html = '<a href="/en/index.html">EN</a> / <a href="/jp/index.html" class="active">JP</a>';
+      }
+      var langSwitch = document.querySelector('.language-switch');
+      if (langSwitch) langSwitch.innerHTML = html;
+    })();
+  </script>
+
+</body>
+</html>

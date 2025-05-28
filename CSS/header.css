@@ -1,6 +1,11 @@
 /* =========================
    ヘッダー・ナビゲーション
 ========================= */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  
+}
+
 .top-bar {
     display: flex;
     justify-content: space-between;
