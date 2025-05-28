@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chiba YOSAKOI - Introduction</title>
-  <link rel="stylesheet" href="/chibaYOSA/css/hajimeni.css">
-  <link rel="stylesheet" href="/chibaYOSA/css/header.css">
-  <link rel="stylesheet" href="/chibaYOSA/css/footer.css">
+  <link rel="stylesheet" href="/chibaYOSA/css//css/hajimeni.css">
+  <link rel="stylesheet" href="/chibaYOSA/css//css/header.css">
+  <link rel="stylesheet" href="/chibaYOSA/css//css/footer.css">
 </head>
 <body>
 
   <div id="header"></div>
 
   <!-- Hero -->
-  <section class="hero sub-hero" style="background-image: url('/chibaYOSA/images/about-hero.jpg');">
+  <section class="hero sub-hero" style="background-image: url('/chibaYOSA/css//images/about-hero.jpg');">
     <div class="hero-content">
       <h1>What is Yosakoi?</h1>
       <p>Where Japanese tradition meets the passion of Chiba</p>
@@ -40,7 +40,7 @@
           </ul>
         </div>
         <div class="intro-image">
-          <img src="/chibaYOSA/images/yosakoi_generic.jpg" alt="What is Yosakoi">
+          <img src="/chibaYOSA/css//images/yosakoi_generic.jpg" alt="What is Yosakoi">
         </div>
       </div>
     </div>
@@ -52,7 +52,7 @@
       <h2 class="section-title">What is Chiba YOSAKOI?</h2>
       <div class="intro-flex reverse">
         <div class="intro-image">
-          <img src="/chibaYOSA/images/yosakoi_intro.jpg" alt="Scene from Chiba YOSAKOI">
+          <img src="/chibaYOSA/css//images/yosakoi_intro.jpg" alt="Scene from Chiba YOSAKOI">
         </div>
         <div class="intro-text">
           <p>“Chiba YOSAKOI” began in <strong>2004</strong>, turning the entire city of Chiba into a stage for celebration.</p>
@@ -71,11 +71,11 @@
 
   <!-- Scripts -->
   <script>
-    fetch("/chibaYOSA/en/header.html").then(res => res.text()).then(data => {
-      document.getElementById("/chibaYOSA/jp/header.html").innerHTML = data;
+    fetch("/chibaYOSA/css//en/header.html").then(res => res.text()).then(data => {
+      document.getElementById("/chibaYOSA/css//jp/header.html").innerHTML = data;
     });
-    fetch("/chibaYOSA/en/footer.html").then(res => res.text()).then(data => {
-      document.getElementById("/chibaYOSA/jp/footer.html").innerHTML = data;
+    fetch("/chibaYOSA/css//en/footer.html").then(res => res.text()).then(data => {
+      document.getElementById("/chibaYOSA/css//jp/footer.html").innerHTML = data;
     });
 
     // Language switch auto generation
@@ -91,7 +91,7 @@
       } else if (isEN) {
         html = '<a href="' + enPath + '" class="active">EN</a> / <a href="' + jpPath + '">JP</a>';
       } else {
-        html = '<a href="/chibaYOSA/en/index.html">EN</a> / <a href="/chibaYOSA/jp/index.html" class="active">JP</a>';
+        html = '<a href="/chibaYOSA/css//en/index.html">EN</a> / <a href="/chibaYOSA/css//jp/index.html" class="active">JP</a>';
       }
       var langSwitch = document.querySelector('.language-switch');
       if (langSwitch) langSwitch.innerHTML = html;
