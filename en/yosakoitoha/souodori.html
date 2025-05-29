@@ -1,13 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SUGGOI WORLD! | Chiba YOSAKOI</title>
-  <link rel="stylesheet" href="../../css/souodori.css">
-  <link rel="stylesheet" href="../../css/header.css">
-  <link rel="stylesheet" href="../../css/footer.css">
+  <link rel="stylesheet" href="http://ss754111.stars.ne.jp/CSS/souodori.css">
+  <link rel="stylesheet" href="http://ss754111.stars.ne.jp/CSS/header.css">
+  <link rel="stylesheet" href="http://ss754111.stars.ne.jp/CSS/footer.css">
 </head>
 <body>
 
@@ -24,7 +23,7 @@
     <section class="media">
       <h2>Audio (MP3)</h2>
       <audio controls>
-        <source src="../../media/suggoi_world.mp3" type="audio/mp3">
+        <source src="http://ss754111.stars.ne.jp/media/suggoi_world.mp3" type="audio/mp3">
         Your browser does not support the audio element.
       </audio>
 
@@ -69,10 +68,10 @@ SUGGOI MATSURI DA! “YEAHHHHH!”
   <div id="footer"></div>
 
   <script>
-    fetch("/en/header.html").then(res => res.text()).then(data => {
+    fetch("http://ss754111.stars.ne.jp/en/header.html").then(res => res.text()).then(data => {
       document.getElementById("header").innerHTML = data;
     });
-    fetch("/en/footer.html").then(res => res.text()).then(data => {
+    fetch("http://ss754111.stars.ne.jp/en/footer.html").then(res => res.text()).then(data => {
       document.getElementById("footer").innerHTML = data;
     });
   </script>

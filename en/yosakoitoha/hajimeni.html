@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chiba Yosakoi - Introduction</title>
-  <link rel="stylesheet" href="../../css/hajimeni.css">
-  <link rel="stylesheet" href="../../css/header.css">
-  <link rel="stylesheet" href="../../css/footer.css">
+  <link rel="stylesheet" href="http://ss754111.stars.ne.jp/CSS/hajimeni.css">
+  <link rel="stylesheet" href="http://ss754111.stars.ne.jp/CSS/header.css">
+  <link rel="stylesheet" href="http://ss754111.stars.ne.jp/CSS/footer.css">
 </head>
 <body>
 
   <div id="header"></div>
 
   <!-- Hero -->
-  <section class="hero sub-hero" style="background-image: url('../../images/about-hero.jpg');">
+  <section class="hero sub-hero" style="background-image: url('http://ss754111.stars.ne.jp/images/about-hero.jpg');">
     <div class="hero-content">
       <h1>What is Yosakoi?</h1>
       <p>A fusion of Japanese tradition and Chiba's passion</p>
@@ -40,7 +40,7 @@
           </ul>
         </div>
         <div class="intro-image">
-          <img src="../../images/yosakoi_generic.jpg" alt="About Yosakoi">
+          <img src="http://ss754111.stars.ne.jp/images/yosakoi_generic.jpg" alt="About Yosakoi">
         </div>
       </div>
     </div>
@@ -52,7 +52,7 @@
       <h2 class="section-title">What is Chiba YOSAKOI?</h2>
       <div class="intro-flex reverse">
         <div class="intro-image">
-          <img src="../../images/yosakoi_intro.jpg" alt="Chiba Yosakoi Festival">
+          <img src="http://ss754111.stars.ne.jp/images/yosakoi_intro.jpg" alt="Chiba Yosakoi Festival">
         </div>
         <div class="intro-text">
           <p>“Chiba YOSAKOI” began in <strong>2004</strong>, turning the entire city of Chiba into a festival stage.</p>
@@ -71,31 +71,13 @@
 
   <!-- Scripts -->
   <script>
-    fetch("/en/header.html").then(res => res.text()).then(data => {
+    fetch("http://ss754111.stars.ne.jp/en/header.html").then(res => res.text()).then(data => {
       document.getElementById("header").innerHTML = data;
     });
-    fetch("/en/footer.html").then(res => res.text()).then(data => {
+    fetch("http://ss754111.stars.ne.jp/en/footer.html").then(res => res.text()).then(data => {
       document.getElementById("footer").innerHTML = data;
     });
 
-    // Language switch auto-generator (absolute path compatible)
-    (function() {
-      var path = location.pathname;
-      var isJP = path.indexOf('/jp/') !== -1;
-      var isEN = path.indexOf('/en/') !== -1;
-      var jpPath = path.replace(/\/en\//, '/jp/');
-      var enPath = path.replace(/\/jp\//, '/en/');
-      var html = '';
-      if (isJP) {
-        html = '<a href="' + enPath + '">EN</a> / <a href="' + jpPath + '" class="active">JP</a>';
-      } else if (isEN) {
-        html = '<a href="' + enPath + '" class="active">EN</a> / <a href="' + jpPath + '">JP</a>';
-      } else {
-        html = '<a href="/en/index.html">EN</a> / <a href="/jp/index.html" class="active">JP</a>';
-      }
-      var langSwitch = document.querySelector('.language-switch');
-      if (langSwitch) langSwitch.innerHTML = html;
-    })();
   </script>
 
 </body>
